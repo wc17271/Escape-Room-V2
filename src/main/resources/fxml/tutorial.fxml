@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="800.0" style="-fx-background-color: #e9ecef;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.TutorialController">
+   <children>
+      <ImageView fitHeight="625.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/tutorialUpdated.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="startOneButton" fitHeight="55.0" fitWidth="137.0" layoutX="656.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/nextOne.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="startTwoButton" fitHeight="55.0" fitWidth="137.0" layoutX="656.0" layoutY="26.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/nextTwo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="startThreeButton" fitHeight="55.0" fitWidth="137.0" layoutX="656.0" layoutY="26.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/nextThree.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="55.0" layoutX="655.0" layoutY="26.0" onMouseEntered="#startHover" onMouseExited="#startUnhover" onMousePressed="#startPressed" onMouseReleased="#startReleased" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="116.0" />
+      <Label alignment="CENTER" layoutY="115.0" prefHeight="50.0" prefWidth="800.0" text="Tutorial" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="Adapa" size="50.0" />
+         </font>
+      </Label>
+      <VBox layoutX="356.0" layoutY="174.0" prefHeight="301.0" prefWidth="218.0">
+         <children>
+            <Label prefHeight="80.0" prefWidth="218.0" text="Solve puzzles and find the elusive orbs" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Adapa" size="25.0" />
+               </font>
+            </Label>
+            <Label prefHeight="99.0" prefWidth="212.0" text="Click on me to ask for hints" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Adapa" size="25.0" />
+               </font>
+            </Label>
+            <Label prefHeight="107.0" prefWidth="218.0" text="Return orbs to the terminal to activate the portal!" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Adapa" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label fx:id="taskText" alignment="CENTER" layoutY="439.0" prefHeight="107.0" prefWidth="800.0" text="If in doubt, refer to the task list at the top left!" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Adapa" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

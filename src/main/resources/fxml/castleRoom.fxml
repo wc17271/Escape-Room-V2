@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="800.0" style="-fx-background-color: #B2C1E8;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.CastleRoomController">
+   <children>
+      <ImageView fitHeight="625.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/chestLayout.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hotbar" fitHeight="53.0" fitWidth="227.0" layoutX="282.0" layoutY="556.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/hotbar.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="15.0" layoutY="15.0" prefHeight="100.0" prefWidth="277.0">
+         <children>
+            <Label fx:id="lblTimer" text="Time Left: ">
+               <font>
+                  <Font name="Adapa" size="29.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTask" prefHeight="20.0" prefWidth="278.0" text="Task:">
+               <font>
+                  <Font name="Adapa" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblHints" text="Hints:">
+               <font>
+                  <Font name="Adapa" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <ImageView fx:id="chestLocked" fitHeight="625.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/lockedChest.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="chestOpenedOrb" fitHeight="625.0" fitWidth="800.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/chestWithOrb.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="chestOpenedOrbOutline" fitHeight="625.0" fitWidth="800.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/chestwithOrbOutline.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="chestEmpty" fitHeight="625.0" fitWidth="800.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/emptyOpenChest.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="backButton" fitHeight="55.0" fitWidth="137.0" layoutX="662.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/backOne.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="backButtonHovered" fitHeight="55.0" fitWidth="137.0" layoutX="662.0" layoutY="19.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/backTwo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="backButtonPressed" fitHeight="55.0" fitWidth="137.0" layoutX="662.0" layoutY="19.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/backThree.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="checkButton" fitHeight="55.0" fitWidth="137.0" layoutX="485.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/unlockOne.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="checkButtonHovered" fitHeight="55.0" fitWidth="137.0" layoutX="485.0" layoutY="397.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/unlockTwo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="checkButtonPressed" fitHeight="55.0" fitWidth="137.0" layoutX="485.0" layoutY="397.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/unlockThree.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="55.0" layoutX="658.0" layoutY="21.0" onMouseEntered="#backHover" onMouseExited="#backUnhover" onMousePressed="#backPressed" onMouseReleased="#backReleased" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="124.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="55.0" layoutX="481.0" layoutY="397.0" onMouseEntered="#checkHover" onMouseExited="#checkUnhover" onMousePressed="#checkPressed" onMouseReleased="#checkReleased" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="124.0" />
+      <Rectangle fx:id="chestRectangle" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="69.0" layoutX="248.0" layoutY="297.0" onMouseEntered="#orbHovered" onMouseExited="#orbUnhovered" onMouseReleased="#orbPressed" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="68.0" />
+      <ImageView fx:id="lockOneIncrement" fitHeight="54.0" fitWidth="56.0" layoutX="442.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/upOne.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lockOneIncrementHovered" fitHeight="54.0" fitWidth="56.0" layoutX="442.0" layoutY="183.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/upTwo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lockOneIncrementPressed" fitHeight="54.0" fitWidth="56.0" layoutX="442.0" layoutY="183.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/upThree.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lockTwoIncrement" fitHeight="54.0" fitWidth="56.0" layoutX="515.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/upOne.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lockTwoIncrementHovered" fitHeight="54.0" fitWidth="56.0" layoutX="515.0" layoutY="183.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/upTwo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lockTwoIncrementPressed" fitHeight="54.0" fitWidth="56.0" layoutX="515.0" layoutY="183.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/upThree.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lockThreeIncrement" fitHeight="54.0" fitWidth="56.0" layoutX="589.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/upOne.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lockThreeIncrementHovered" fitHeight="54.0" fitWidth="56.0" layoutX="589.0" layoutY="183.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/upTwo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lockThreeIncrementPressed" fitHeight="54.0" fitWidth="56.0" layoutX="589.0" layoutY="183.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/upThree.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lockOneDecrement" fitHeight="54.0" fitWidth="56.0" layoutX="442.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/downOne.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lockOneDecrementHovered" fitHeight="54.0" fitWidth="56.0" layoutX="442.0" layoutY="306.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/downTwo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lockOneDecrementPressed" fitHeight="54.0" fitWidth="56.0" layoutX="442.0" layoutY="306.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/downThree.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lockTwoDecrement" fitHeight="54.0" fitWidth="56.0" layoutX="515.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/downOne.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lockTwoDecrementHovered" fitHeight="54.0" fitWidth="56.0" layoutX="515.0" layoutY="306.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/downTwo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lockTwoDecrementPressed" fitHeight="54.0" fitWidth="56.0" layoutX="515.0" layoutY="306.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/downThree.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lockThreeDecrement" fitHeight="54.0" fitWidth="56.0" layoutX="589.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/downOne.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lockThreeDecrementHovered" fitHeight="54.0" fitWidth="56.0" layoutX="589.0" layoutY="306.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/downTwo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lockThreeDecrementPressed" fitHeight="54.0" fitWidth="56.0" layoutX="589.0" layoutY="306.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/downThree.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="incrementOne" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="55.0" layoutX="442.0" layoutY="181.0" onMouseEntered="#lockOneIncrementHover" onMouseExited="#lockOneIncrementUnhover" onMousePressed="#lockOneIncrementPressed" onMouseReleased="#lockOneIncrementReleased" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="56.0" />
+      <Rectangle fx:id="incrementTwo" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="55.0" layoutX="515.0" layoutY="181.0" onMouseEntered="#lockTwoIncrementHover" onMouseExited="#lockTwoIncrementUnhover" onMousePressed="#lockTwoIncrementPressed" onMouseReleased="#lockTwoIncrementReleased" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="56.0" />
+      <Rectangle fx:id="incrementThree" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="55.0" layoutX="589.0" layoutY="181.0" onMouseEntered="#lockThreeIncrementHover" onMouseExited="#lockThreeIncrementUnhover" onMousePressed="#lockThreeIncrementPressed" onMouseReleased="#lockThreeIncrementReleased" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="56.0" />
+      <Rectangle fx:id="decrementOne" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="55.0" layoutX="442.0" layoutY="304.0" onMouseEntered="#lockOneDecrementHover" onMouseExited="#lockOneDecrementUnhover" onMousePressed="#lockOneDecrementPressed" onMouseReleased="#lockOneDecrementReleased" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="56.0" />
+      <Rectangle fx:id="decrementTwo" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="55.0" layoutX="515.0" layoutY="304.0" onMouseEntered="#lockTwoDecrementHover" onMouseExited="#lockTwoDecrementUnhover" onMousePressed="#lockTwoDecrementPressed" onMouseReleased="#lockTwoDecrementReleased" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="56.0" />
+      <Rectangle fx:id="decrementThree" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="55.0" layoutX="589.0" layoutY="304.0" onMouseEntered="#lockThreeDecrementHover" onMouseExited="#lockThreeDecrementUnhover" onMousePressed="#lockThreeDecrementPressed" onMouseReleased="#lockThreeDecrementReleased" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="56.0" />
+      <ImageView fitHeight="55.0" fitWidth="209.0" layoutX="443.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/codePlatformSmall.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lockOneNumber" alignment="CENTER" layoutX="446.0" layoutY="247.0" prefWidth="56.0" text="0" textFill="WHITE">
+         <font>
+            <Font name="Adapa" size="45.0" />
+         </font>
+      </Label>
+      <Label fx:id="lockTwoNumber" alignment="CENTER" layoutX="517.0" layoutY="247.0" prefWidth="56.0" text="0" textFill="WHITE">
+         <font>
+            <Font name="Adapa" size="45.0" />
+         </font>
+      </Label>
+      <Label fx:id="lockThreeNumber" alignment="CENTER" layoutX="588.0" layoutY="247.0" prefWidth="56.0" text="0" textFill="WHITE">
+         <font>
+            <Font name="Adapa" size="45.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="fishingRodIcon" fitHeight="30.0" fitWidth="30.0" layoutX="292.0" layoutY="566.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fishingRodIcon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="axeIcon" fitHeight="30.0" fitWidth="30.0" layoutX="296.0" layoutY="566.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/axeIcon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="planksIcon" fitHeight="30.0" fitWidth="30.0" layoutX="334.0" layoutY="566.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/planksIcon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fishIcon" fitHeight="30.0" fitWidth="30.0" layoutX="330.0" layoutY="566.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fishIcon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="blueOrb" fitHeight="21.0" fitWidth="21.0" layoutX="416.75" layoutY="570.75" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/blueOrb.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="greenOrb" fitHeight="21.0" fitWidth="21.0" layoutX="450.25" layoutY="570.75" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/greenOrb.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="redOrb" fitHeight="21.0" fitWidth="21.0" layoutX="482.75" layoutY="570.25" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/redOrb.png" />
+         </image>
+      </ImageView>
+
+      <ImageView fx:id="gameMasterDefault" fitHeight="141.0" fitWidth="171.0" layoutX="606.0" layoutY="506.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/gameMaster.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="gameMasterChat" fitHeight="141.0" fitWidth="171.0" layoutX="606.0" layoutY="490.0" onMouseClicked="#gameMasterOnClick" onMouseEntered="#gameMasterOnHover" onMouseExited="#gameMasterOnUnhover" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/gameMasterOnHover.gif" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

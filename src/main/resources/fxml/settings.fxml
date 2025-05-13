@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="800.0" style="-fx-background-color: #e9ecef;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.SettingsController">
+   <children>
+      <Label alignment="CENTER" layoutY="82.0" prefHeight="86.0" prefWidth="800.0" text="Menu" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="Adapa" size="80.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutY="178.0" prefHeight="26.0" prefWidth="800.0" text="Go back to start screen or quit" textAlignment="CENTER">
+         <font>
+            <Font name="Adapa" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="283.0" fitWidth="234.0" layoutX="283.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/startPane.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="restartOneButton" fitHeight="55.0" fitWidth="137.0" layoutX="343.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/restartOne.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="restartTwoButton" fitHeight="55.0" fitWidth="137.0" layoutX="343.0" layoutY="287.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/restartTwo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="restartThreeButton" fitHeight="55.0" fitWidth="137.0" layoutX="343.0" layoutY="287.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/restartThree.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="quitOneButton" fitHeight="55.0" fitWidth="137.0" layoutX="343.0" layoutY="378.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/quitOne.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="quitTwoButton" fitHeight="55.0" fitWidth="137.0" layoutX="343.0" layoutY="378.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/quitTwo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="quitThreeButton" fitHeight="55.0" fitWidth="137.0" layoutX="343.0" layoutY="378.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/quitThree.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="15.0" layoutY="15.0" prefHeight="100.0" prefWidth="277.0">
+         <children>
+            <Label fx:id="lblTimer" text="Time Left: ">
+               <font>
+                  <Font name="Adapa" size="29.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTask" prefHeight="20.0" prefWidth="278.0" text="Task:">
+               <font>
+                  <Font name="Adapa" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblHints" text="Hints:">
+               <font>
+                  <Font name="Adapa" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <ImageView fx:id="backButtonOne" fitHeight="55.0" fitWidth="137.0" layoutX="656.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/backOne.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="backButtonTwo" fitHeight="55.0" fitWidth="137.0" layoutX="656.0" layoutY="26.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/backTwo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="backButtonThree" fitHeight="55.0" fitWidth="137.0" layoutX="656.0" layoutY="26.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/backThree.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="backButton" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="55.0" layoutX="656.0" layoutY="26.0" onMouseEntered="#backHover" onMouseExited="#backUnhover" onMousePressed="#backPressed" onMouseReleased="#backReleased" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="116.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="55.0" layoutX="343.0" layoutY="377.0" onMouseEntered="#quitHover" onMouseExited="#quitUnhover" onMousePressed="#quitPressed" onMouseReleased="#quitReleased" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="116.0" />
+      <Rectangle fx:id="restartButton" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="55.0" layoutX="343.0" layoutY="287.0" onMouseEntered="#restartHover" onMouseExited="#restartUnhover" onMousePressed="#restartPressed" onMouseReleased="#restartReleased" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="116.0" />
+      <ImageView fx:id="restartBackground" disable="true" fitHeight="625.0" fitWidth="800.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/restartBackgroundImage.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="restartAnimation" disable="true" fitHeight="72.0" fitWidth="407.0" layoutX="191.0" layoutY="278.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/restartAnimation.gif" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

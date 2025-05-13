@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="800.0" style="-fx-background-color: #e9ecef;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.StoryController">
+   <children>
+      <ImageView fx:id="backOneButton" fitHeight="55.0" fitWidth="137.0" layoutX="656.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/nextOne.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="backTwoButton" fitHeight="55.0" fitWidth="137.0" layoutX="656.0" layoutY="26.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/nextTwo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="backThreeButton" fitHeight="55.0" fitWidth="137.0" layoutX="656.0" layoutY="26.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/nextThree.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="625.0" fitWidth="800.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/dialogueLayout.gif" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="openingText" editable="false" layoutX="335.0" layoutY="127.0" prefHeight="244.0" prefWidth="349.0" style="-fx-faint-focus-color: transparent; -fx-focus-color: #abb5be;" wrapText="true">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </TextArea>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="55.0" layoutX="655.0" layoutY="26.0" onMouseEntered="#backHover" onMouseExited="#backUnhover" onMousePressed="#backPressed" onMouseReleased="#backReleased" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="116.0" />
+      <ImageView fx:id="pauseOne" fitHeight="55.0" fitWidth="137.0" layoutX="452.0" layoutY="411.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pauseOne.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pauseTwo" fitHeight="55.0" fitWidth="137.0" layoutX="452.0" layoutY="411.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pauseTwo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pauseThree" fitHeight="55.0" fitWidth="137.0" layoutX="452.0" layoutY="411.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pauseThree.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="audioOne" fitHeight="55.0" fitWidth="137.0" layoutX="452.0" layoutY="411.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/audioOne.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="audioTwo" fitHeight="55.0" fitWidth="137.0" layoutX="452.0" layoutY="411.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/audioTwo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="audioThree" fitHeight="55.0" fitWidth="137.0" layoutX="452.0" layoutY="411.0" onMouseEntered="#audioHover" onMouseExited="#audioUnhover" onMousePressed="#audioPressed" onMouseReleased="#audioReleased" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/audioThree.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

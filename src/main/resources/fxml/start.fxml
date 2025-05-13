@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="800.0" style="-fx-background-color: #e9ecef;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.StartScreenController">
+   <children>
+      <Label alignment="CENTER" layoutY="83.0" prefHeight="86.0" prefWidth="800.0" text="OrbEscape" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="Adapa" size="80.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutY="178.0" prefHeight="26.0" prefWidth="800.0" text="Unleash your inner detective!" textAlignment="CENTER">
+         <font>
+            <Font name="Adapa" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="269.0" fitWidth="336.0" layoutX="283.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/startPane.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="startOneButton" fitHeight="55.0" fitWidth="137.0" layoutX="343.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/startOne.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="startTwoButton" fitHeight="55.0" fitWidth="137.0" layoutX="343.0" layoutY="287.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/startTwo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="startThreeButton" fitHeight="55.0" fitWidth="137.0" layoutX="343.0" layoutY="287.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/startThree.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="quitOneButton" fitHeight="55.0" fitWidth="137.0" layoutX="343.0" layoutY="378.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/quitOne.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="quitTwoButton" fitHeight="55.0" fitWidth="137.0" layoutX="343.0" layoutY="378.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/quitTwo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="quitThreeButton" fitHeight="55.0" fitWidth="137.0" layoutX="343.0" layoutY="378.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/quitThree.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="55.0" layoutX="343.0" layoutY="287.0" onMouseEntered="#startHover" onMouseExited="#startUnhover" onMousePressed="#startPressed" onMouseReleased="#startReleased" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="116.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="55.0" layoutX="343.0" layoutY="378.0" onMouseEntered="#quitHover" onMouseExited="#quitUnhover" onMousePressed="#quitPressed" onMouseReleased="#quitReleased" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="116.0" />
+   </children>
+</Pane>

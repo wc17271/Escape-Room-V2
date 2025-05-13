@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="800.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.GameFinishedController">
+   <children>
+      <Label fx:id="lblTitle" alignment="CENTER" layoutY="83.0" prefWidth="800.0" text="Congratulations!" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="System Bold" size="80.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSubtitle" alignment="CENTER" layoutY="178.0" prefWidth="800.0" text="You Escaped" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="283.0" fitWidth="234.0" layoutX="283.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/startPane.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="restartOneButton" fitHeight="55.0" fitWidth="137.0" layoutX="343.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/restartOne.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="restartTwoButton" fitHeight="55.0" fitWidth="137.0" layoutX="343.0" layoutY="287.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/restartTwo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="restartThreeButton" fitHeight="55.0" fitWidth="137.0" layoutX="343.0" layoutY="287.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/restartThree.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="quitOneButton" fitHeight="55.0" fitWidth="137.0" layoutX="343.0" layoutY="378.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/quitOne.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="quitTwoButton" fitHeight="55.0" fitWidth="137.0" layoutX="343.0" layoutY="378.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/quitTwo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="quitThreeButton" fitHeight="55.0" fitWidth="137.0" layoutX="343.0" layoutY="378.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/quitThree.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="55.0" layoutX="343.0" layoutY="287.0" onMouseEntered="#restartHover" onMouseExited="#restartUnhover" onMousePressed="#restartPressed" onMouseReleased="#restartReleased" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="116.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="55.0" layoutX="343.0" layoutY="377.0" onMouseEntered="#quitHover" onMouseExited="#quitUnhover" onMousePressed="#quitPressed" onMouseReleased="#quitReleased" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="116.0" />
+      <ImageView fx:id="restartingBackground" disable="true" fitHeight="625.0" fitWidth="800.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/restartBackgroundImage.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="restartingAnimation" disable="true" fitHeight="72.0" fitWidth="407.0" layoutX="191.0" layoutY="278.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/restartAnimation.gif" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

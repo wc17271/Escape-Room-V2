@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="800.0" style="-fx-background-color: F9DFE0;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.LavaRoomController">
+   <children>
+      <VBox layoutX="15.0" layoutY="15.0" prefHeight="100.0" prefWidth="277.0">
+         <children>
+            <Label fx:id="lblTimer" text="Time Left: ">
+               <font>
+                  <Font name="Adapa" size="29.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTask" prefHeight="20.0" prefWidth="278.0" text="Task:">
+               <font>
+                  <Font name="Adapa" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblHints" text="Hints:">
+               <font>
+                  <Font name="Adapa" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <ImageView fitHeight="485.0" fitWidth="549.0" layoutX="132.75" layoutY="55.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/centralRoom.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hotbar" fitHeight="53.0" fitWidth="227.0" layoutX="282.0" layoutY="556.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/hotbar.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="rightArrow" fitHeight="54.0" fitWidth="56.0" layoutX="723.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/rightArrowOne.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="rightArrowHover" fitHeight="54.0" fitWidth="56.0" layoutX="723.0" layoutY="272.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/rightArrowTwo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="rightArrowPressed" fitHeight="54.0" fitWidth="56.0" layoutX="723.0" layoutY="272.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/rightArrowThree.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="floor" fitHeight="459.0" fitWidth="661.0" layoutX="55.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/lavaRoom.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bridge" fitHeight="133.0" fitWidth="232.0" layoutX="173.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/bridge.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="door" fitHeight="80.0" fitWidth="48.0" layoutX="348.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/door.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bridgeOutline" fitHeight="139.0" fitWidth="244.0" layoutX="168.0" layoutY="279.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/bridgeOutline.png" />
+         </image>
+      </ImageView>
+      <Polygon fx:id="bridgeOutlinePolygon" fill="DODGERBLUE" layoutX="277.0" layoutY="424.0" onMouseClicked="#bridgeClicked" onMouseEntered="#bridgeHovered" onMouseExited="#bridgeUnhovered" opacity="0.0" points="70.78475952148438, -42.5643310546875, 84.0, -45.4111328125, 84.0, -73.4111328125, 130.0, -100.4111328125, 64.0, -137.4111328125, -104.32618713378906, -57.266326904296875, -104.32618713378906, -42.5643310546875, -37.78021240234375, -7.9393310546875, -9.14996337890625, -26.314727783203125, -4.120330810546875, -13.54718017578125, 21.41473388671875, -13.54718017578125, 21.41473388671875, -39.475250244140625, 54.023712158203125, -57.266326904296875, 54.023712158203125, -45.4111328125" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fx:id="brokenBridge" fitHeight="133.0" fitWidth="232.0" layoutX="173.0" layoutY="285.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/brokenBridge.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="brokenBridgeOutline" fitHeight="139.0" fitWidth="244.0" layoutX="168.0" layoutY="279.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/brokenBridgeOutline.png" />
+         </image>
+      </ImageView>
+      <Polygon fx:id="brokenBridgeOutlinePolygon" fill="DODGERBLUE" layoutX="277.0" layoutY="424.0" onMouseClicked="#brokenBridgeClicked" onMouseEntered="#brokenBridgeHovered" onMouseExited="#brokenBridgeUnhovered" opacity="0.0" points="70.78475952148438, -42.5643310546875, 84.0, -45.4111328125, 84.0, -73.4111328125, 130.0, -100.4111328125, 64.0, -137.4111328125, -104.32618713378906, -57.266326904296875, -104.32618713378906, -42.5643310546875, -37.78021240234375, -7.9393310546875, -9.14996337890625, -26.314727783203125, -4.120330810546875, -13.54718017578125, 21.41473388671875, -13.54718017578125, 21.41473388671875, -39.475250244140625, 54.023712158203125, -57.266326904296875, 54.023712158203125, -45.4111328125" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fx:id="fixedBridge" fitHeight="133.0" fitWidth="232.0" layoutX="173.0" layoutY="285.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fixedBridge.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fixedBridgeOutline" fitHeight="139.0" fitWidth="244.0" layoutX="168.0" layoutY="279.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fixedBridgeOutline.png" />
+         </image>
+      </ImageView>
+      <Polygon fx:id="fixedBridgeOutlinePolygon" fill="DODGERBLUE" layoutX="277.0" layoutY="424.0" onMouseClicked="#fixedBridgeClicked" onMouseEntered="#fixedBridgeHovered" onMouseExited="#fixedBridgeUnhovered" opacity="0.0" points="70.78475952148438, -42.5643310546875, 84.0, -45.4111328125, 84.0, -73.4111328125, 130.0, -100.4111328125, 64.0, -137.4111328125, -104.32618713378906, -57.266326904296875, -104.32618713378906, -42.5643310546875, -37.78021240234375, -7.9393310546875, -9.14996337890625, -26.314727783203125, -4.120330810546875, -13.54718017578125, 21.41473388671875, -13.54718017578125, 21.41473388671875, -39.475250244140625, 54.023712158203125, -57.266326904296875, 54.023712158203125, -45.4111328125" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fx:id="lavaParticleOne" fitHeight="16.0" fitWidth="35.0" layoutX="377.0" layoutY="419.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/lavaParticle.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lavaParticleTwo" fitHeight="16.0" fitWidth="35.0" layoutX="195.0" layoutY="277.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/lavaParticle.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lavaParticleThree" fitHeight="16.0" fitWidth="35.0" layoutX="569.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/lavaParticle.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="doorOutline" fitHeight="91.0" fitWidth="57.0" layoutX="343.0" layoutY="226.0" onMouseClicked="#doorClicked" onMouseEntered="#doorHovered" onMouseExited="#doorUnhovered" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/doorOutline.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="blueDragon" fitHeight="107.0" fitWidth="67.0" layoutX="255.0" layoutY="283.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/dragonDark.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="blueDragonOutline" fitHeight="77.0" fitWidth="78.0" layoutX="250.0" layoutY="278.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/dragonDarkOutline.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="dragon" fitHeight="107.0" fitWidth="67.0" layoutX="255.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/dragon.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="dragonOutline" fitHeight="77.0" fitWidth="78.0" layoutX="250.0" layoutY="278.0" onMouseClicked="#dragonClicked" onMouseEntered="#dragonHovered" onMouseExited="#dragonUnhovered" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/dragonOutline.gif" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="rightRectangle" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="51.0" layoutX="724.0" layoutY="272.0" onMouseEntered="#rightButtonHovered" onMouseExited="#rightButtonUnhovered" onMousePressed="#rightButtonClicked" onMouseReleased="#rightButtonUnclick" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="53.0" />
+      <ImageView fx:id="helpOne" fitHeight="54.0" fitWidth="56.0" layoutX="652.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/infoOne.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="helpTwo" fitHeight="54.0" fitWidth="56.0" layoutX="652.0" layoutY="21.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/infoTwo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="helpThree" fitHeight="54.0" fitWidth="56.0" layoutX="652.0" layoutY="21.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/infoThree.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="settingsOne" fitHeight="54.0" fitWidth="56.0" layoutX="722.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/homeOne.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="settingsTwo" fitHeight="54.0" fitWidth="56.0" layoutX="722.0" layoutY="21.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/homeTwo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="settingsThree" fitHeight="54.0" fitWidth="56.0" layoutX="722.0" layoutY="21.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/homeThree.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="48.0" layoutX="723.0" layoutY="18.0" onMouseEntered="#onSettingsHover" onMouseExited="#onSettingsUnhover" onMousePressed="#onSettingsPressed" onMouseReleased="#onSettingsReleased" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="54.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="46.0" layoutX="655.0" layoutY="22.0" onMouseEntered="#onHelpHover" onMouseExited="#onHelpUnhover" onMousePressed="#onHelpPressed" onMouseReleased="#onHelpReleased" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="48.0" />
+      <ImageView fx:id="fishingRodIcon" fitHeight="30.0" fitWidth="30.0" layoutX="292.0" layoutY="566.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fishingRodIcon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="axeIcon" fitHeight="30.0" fitWidth="30.0" layoutX="296.0" layoutY="566.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/axeIcon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="planksIcon" fitHeight="30.0" fitWidth="30.0" layoutX="334.0" layoutY="566.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/planksIcon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fishIcon" fitHeight="30.0" fitWidth="30.0" layoutX="330.0" layoutY="566.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fishIcon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="blueOrb" fitHeight="21.0" fitWidth="21.0" layoutX="416.75" layoutY="570.75" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/blueOrb.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="greenOrb" fitHeight="21.0" fitWidth="21.0" layoutX="450.25" layoutY="570.75" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/greenOrb.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="redOrb" fitHeight="21.0" fitWidth="21.0" layoutX="482.75" layoutY="570.25" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/redOrb.png" />
+         </image>
+      </ImageView>
+<ImageView fx:id="gameMasterDefault" fitHeight="141.0" fitWidth="171.0" layoutX="606.0" layoutY="506.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/gameMaster.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="gameMasterChat" fitHeight="141.0" fitWidth="171.0" layoutX="606.0" layoutY="490.0" onMouseClicked="#gameMasterOnClick" onMouseEntered="#gameMasterOnHover" onMouseExited="#gameMasterOnUnhover" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/gameMasterOnHover.gif" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>
